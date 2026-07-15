@@ -125,6 +125,42 @@
             margin-top: 3rem; 
         }
         footer p { margin: 0.5rem 0; color: #E8F5E9; font-size: 1.1rem; }
+        /* --- MOBILE RESPONSIVENESS FIXES --- */
+        @media (max-width: 768px) {
+            /* 1. Stack the header cleanly */
+            header { 
+                flex-direction: column; 
+                text-align: center; 
+                padding: 1rem; 
+            }
+            nav { 
+                margin-top: 1rem; 
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                flex-wrap: wrap;
+            }
+            nav a { 
+                margin-left: 0; 
+                font-size: 0.95rem; 
+            }
+
+            /* 2. Shrink massive laptop text */
+            .hero { padding: 3rem 1rem; }
+            .hero h2 { font-size: 2.2rem; }
+            .hero p { font-size: 1rem; }
+            
+            /* 3. Force the cards into one perfect column */
+            .grid { 
+                grid-template-columns: 1fr; 
+                gap: 1.5rem; 
+                margin-bottom: 2rem;
+            }
+            .container { padding: 0 1rem; }
+            
+            /* 4. Adjust card padding */
+            .card { padding: 1.5rem; }
+        }
     </style>
 </head>
 <body>
